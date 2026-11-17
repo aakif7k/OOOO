@@ -9,10 +9,10 @@
 export interface ChapterSong {
   src: string;          // EDIT ME: path to song audio file
   startAt: number;      // EDIT ME: seek start offset in seconds
-  duration: number;     // EDIT ME: playback duration window in seconds (default: 30)
+  duration: number;     // EDIT ME: playback duration window in seconds (default: 35)
   fadeIn: number;       // EDIT ME: fade in duration in seconds (default: 1.2)
   fadeOut: number;      // EDIT ME: fade out duration in seconds (default: 2)
-  loop?: boolean;       // EDIT ME: loop the 30s window (true for chapter 5)
+  loop?: boolean;       // EDIT ME: loop the 35s window (true for chapter 5)
 }
 
 export interface Chapter {
@@ -36,7 +36,7 @@ export interface ProposalConfig {
   yesMessage: string;
   yesSubtext: string;
   noStages: string[];
-  gateProposal?: boolean;     // EDIT ME: gate proposal with 30s lock (default: false)
+  gateProposal?: boolean;     // EDIT ME: gate proposal with 35s lock (default: false)
 }
 
 export interface SiteContent {
@@ -94,7 +94,7 @@ export const content: SiteContent = {
       song: {
         src: '/music/song-2.mp3', // railin oligal
         startAt: 15,               // EDIT ME: seek start time in seconds
-        duration: 30,             // EDIT ME: playback duration in seconds
+        duration: 32,             // EDIT ME: playback duration in seconds
         fadeIn: 1.2,              // EDIT ME: fade in in seconds
         fadeOut: 2,               // EDIT ME: fade out in seconds
       },
@@ -121,7 +121,7 @@ export const content: SiteContent = {
       song: {
         src: '/music/song-5.mp3', // With Love
         startAt: 28,               // EDIT ME: seek start time in seconds
-        duration: 30,             // EDIT ME: playback duration in seconds
+        duration: 32,             // EDIT ME: playback duration in seconds
         fadeIn: 1.2,              // EDIT ME: fade in in seconds
         fadeOut: 2,               // EDIT ME: fade out in seconds
       },
@@ -147,7 +147,7 @@ export const content: SiteContent = {
       song: {
         src: '/music/song-3.mp3', // Vazhimuludhum varuvaiya
         startAt: 70,               // EDIT ME: seek start time in seconds
-        duration: 30,             // EDIT ME: playback duration in seconds
+        duration: 32,             // EDIT ME: playback duration in seconds
         fadeIn: 1.2,              // EDIT ME: fade in in seconds
         fadeOut: 2,               // EDIT ME: fade out in seconds
       },
@@ -177,7 +177,7 @@ export const content: SiteContent = {
       song: {
         src: '/music/song-1.mp3', // oru padhi kanavu
         startAt: 0,               // EDIT ME: seek start time in seconds
-        duration: 30,             // EDIT ME: playback duration in seconds
+        duration: 32,             // EDIT ME: playback duration in seconds
         fadeIn: 1.2,              // EDIT ME: fade in in seconds
         fadeOut: 2,               // EDIT ME: fade out in seconds
       },
@@ -203,7 +203,7 @@ export const content: SiteContent = {
       song: {
         src: '/music/song-4.mp3', // Venmegam Pennaga BGM
         startAt: 0,               // EDIT ME: seek start time in seconds
-        duration: 30,             // EDIT ME: playback duration in seconds
+        duration: 32,             // EDIT ME: playback duration in seconds
         fadeIn: 1.2,              // EDIT ME: fade in in seconds
         fadeOut: 2,               // EDIT ME: fade out in seconds
         loop: true,               // EDIT ME: loop softly until proposal answered

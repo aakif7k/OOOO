@@ -143,7 +143,7 @@ function scheduleWindow(slot: AudioSlot, config: ChapterSong) {
   const ctx = getAudioContext();
   if (!ctx || !slot.gain) return;
 
-  const duration = config.duration || 30;
+  const duration = config.duration || 35;
   const fadeOut = config.fadeOut || 2;
   const fadeIn = config.fadeIn || 1.2;
   const fadeStartTimeMs = Math.max(0, (duration - fadeOut) * 1000);

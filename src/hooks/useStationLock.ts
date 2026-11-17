@@ -10,7 +10,7 @@ interface UseStationLockOptions {
 
 export function useStationLock({
   stationIndex,
-  duration = 30,
+  duration = 35,
   isCompleted,
   onUnlock,
 }: UseStationLockOptions) {

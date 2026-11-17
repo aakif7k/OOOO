@@ -46,10 +46,10 @@ export function MetroCarriage({
   const isConfession = stationIndex === 3;
   const isNightScene = chapter.sceneId === 'dusk' || chapter.sceneId === 'starry';
 
-  // 30-second station lock
+  // 35-second station lock
   const { isLocked, remainingSeconds, progress } = useStationLock({
     stationIndex,
-    duration: chapter.song?.duration ?? 30,
+    duration: chapter.song?.duration ?? 35,
     isCompleted,
     onUnlock: onUnlockStation,
   });
