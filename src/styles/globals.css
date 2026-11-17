@@ -1,0 +1,205 @@
+/* ============================================================
+   GLOBAL BASE STYLES · Our Metro Journey
+   ============================================================ */
+
+@import url('./tokens.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  height: 100%;
+  height: -webkit-fill-available;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background: var(--color-cream);
+  color: var(--color-ink);
+  height: 100%;
+  height: -webkit-fill-available;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- Utilities ---------- */
+.safe-top    { padding-top: env(safe-area-inset-top, 0px); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 20px); }
+.safe-x      { padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+
+/* Glass morphism */
+.glass {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+.glass-dark {
+  background: rgba(43,42,76,0.72);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.glass-pink {
+  background: rgba(255,200,221,0.5);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* Fade mask for scrollable areas */
+.fade-mask-y {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+/* Paper grain overlay */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Kinetic text base */
+.word-mask {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.word-rise {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-heart), var(--color-lavender), var(--color-lineBlue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer sweep on text */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-ink) 0%,
+    var(--color-ink) 40%,
+    var(--color-gold) 50%,
+    var(--color-ink) 60%,
+    var(--color-ink) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Swinging grab handle */
+@keyframes swing {
+  0%, 100% { transform: rotate(-6deg) translateX(-1px); }
+  50% { transform: rotate(6deg) translateX(1px); }
+}
+
+.handle-sway { animation: swing 2.8s ease-in-out infinite; }
+
+/* Train rumble */
+@keyframes rumble {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(0.4px, -0.3px); }
+  50% { transform: translate(-0.3px, 0.4px); }
+  75% { transform: translate(0.5px, 0.2px); }
+}
+
+.train-rumble { animation: rumble 0.08s linear infinite; }
+
+/* Light streak */
+@keyframes lightStreak {
+  0% { transform: translateX(-100%) scaleX(0.5); opacity: 0; }
+  10% { opacity: 0.4; transform: translateX(-60%) scaleX(1); }
+  90% { opacity: 0.3; transform: translateX(60%) scaleX(1); }
+  100% { transform: translateX(100%) scaleX(0.5); opacity: 0; }
+}
+
+.light-streak {
+  animation: lightStreak linear infinite;
+}
+
+/* Heart float animation */
+@keyframes heartFloat {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-80px) scale(0.4); opacity: 0; }
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-heart);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Scrollbar hide */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Tamil lang */
+[lang="ta"] {
+  font-family: var(--font-tamil);
+}
+
+/* Tanglish wavy underline */
+.tanglish {
+  font-family: var(--font-hand);
+  color: var(--color-heart);
+  text-decoration: underline wavy var(--color-heart) 1px;
+  text-underline-offset: 4px;
+}
+
+/* Button ripple */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 50% 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  transform: scale(0);
+  transition: width 0.6s ease, height 0.6s ease, inset 0.6s ease, opacity 0.6s ease;
+}
+.btn-ripple:active::after {
+  width: 200%;
+  height: 200%;
+  inset: -50% -50%;
+  opacity: 0;
+}

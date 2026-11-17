@@ -1,0 +1,46 @@
+/* ============================================================
+   DESIGN TOKENS · Our Metro Journey
+   ============================================================ */
+:root {
+  /* Palette */
+  --color-cream:      #FFF7F0;
+  --color-warm-white: #FFFDFB;
+  --color-pink:       #FFC8DD;
+  --color-blush:      #FFAFCC;
+  --color-lavender:   #CDB4DB;
+  --color-lilac:      #E9DDF7;
+  --color-blue:       #BDE0FE;
+  --color-sky:        #A2D2FF;
+  --color-ink:        #2B2A4C;
+  --color-heart:      #FF5D8F;
+  --color-gold:       #FFD27D;
+  --color-lineBlue:   #2F6FED;
+  --color-lineGreen:  #2FA66A;
+
+  /* Per-station accent (index-based) */
+  --station-1-accent: #FFC8DD;
+  --station-2-accent: #BDE0FE;
+  --station-3-accent: #FFD27D;
+  --station-4-accent: #CDB4DB;
+  --station-5-accent: #FF5D8F;
+
+  /* Fonts */
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-ui:      "Bricolage Grotesque", "Plus Jakarta Sans", sans-serif;
+  --font-content: "Poppins", "Plus Jakarta Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-hand:    Caveat, cursive;
+  --font-mono:    "JetBrains Mono", "Space Mono", monospace;
+  --font-tamil:   "Noto Sans Tamil", sans-serif;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-glass: 0 8px 32px rgba(43,42,76,0.08), 0 1px 2px rgba(43,42,76,0.06);
+  --shadow-card:  0 4px 24px rgba(43,42,76,0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+  --shadow-glow:  0 0 24px rgba(255,93,143,0.35);
+}

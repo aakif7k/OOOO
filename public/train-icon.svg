@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Pastel Metro Train Cute Icon -->
+  <rect x="8" y="10" width="48" height="38" rx="10" fill="#FFC8DD" stroke="#5B3A5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="14" y="16" width="36" height="16" rx="5" fill="#BDE0FE" stroke="#5B3A5E" stroke-width="2.5"/>
+  <!-- Front window reflection -->
+  <line x1="18" y1="20" x2="22" y2="28" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <line x1="24" y1="20" x2="26" y2="25" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <!-- Headlights -->
+  <circle cx="17" cy="38" r="3.5" fill="#FFF8F0" stroke="#5B3A5E" stroke-width="2"/>
+  <circle cx="47" cy="38" r="3.5" fill="#FFF8F0" stroke="#5B3A5E" stroke-width="2"/>
+  <!-- Cute smile and blush -->
+  <path d="M 28 38 Q 32 41 36 38" fill="none" stroke="#5B3A5E" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="23" cy="38" rx="2" ry="1.5" fill="#FFAFCC" opacity="0.8"/>
+  <ellipse cx="41" cy="38" rx="2" ry="1.5" fill="#FFAFCC" opacity="0.8"/>
+  <!-- Wheels -->
+  <rect x="14" y="48" width="8" height="6" rx="2" fill="#CDB4DB" stroke="#5B3A5E" stroke-width="2"/>
+  <rect x="42" y="48" width="8" height="6" rx="2" fill="#CDB4DB" stroke="#5B3A5E" stroke-width="2"/>
+  <!-- Small Heart on Roof -->
+  <path d="M 32 8 C 30 5 26 6 26 9 C 26 12 32 15 32 15 C 32 15 38 12 38 9 C 38 6 34 5 32 8 Z" fill="#FF5D8F"/>
+</svg>
+
