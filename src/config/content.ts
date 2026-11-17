@@ -143,7 +143,7 @@ export const content: SiteContent = {
       ],
       sceneId: 'golden',
       accentColor: '#FFD27D',
-      taglineColor: '#92400E',
+      taglineColor: '#d28787ff',
       song: {
         src: '/music/song-3.mp3', // Vazhimuludhum varuvaiya
         startAt: 70,               // EDIT ME: seek start time in seconds
